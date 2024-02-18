@@ -22,7 +22,7 @@ If you're on Windows, You'll probably have to manually download `podman` and do 
 
 To run the script, do the following:
 
-```batch
+```bash
 # make the script executable
 chmod ./start_pihole.sh
 
