@@ -47,9 +47,9 @@ configure_dns() {
     nmcli conn modify "$connection_name" ipv6.ignore-auto-dns yes
 
     # Step 5: Update DNS servers to local IPs
-    echo ">> Changing ipv4 dns to '$ipv4_addr'"
+    echo ">> Changing IPV4 DNS to '$ipv4_addr'"
     nmcli conn modify "$connection_name" ipv4.dns "$ipv4_addr"
-    echo ">> Changing ipv6 dns to '$ipv6_addr'"
+    echo ">> Changing IPV6 DNS to '$ipv6_addr'"
     nmcli conn modify "$connection_name" ipv6.dns "$ipv6_addr"
 
     # Step 6: Reconnect the connection
