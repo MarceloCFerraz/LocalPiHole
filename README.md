@@ -62,6 +62,12 @@ There are multiple people who maintain huge lists of ads providers. I recommend 
 
 Summing all of the before mentioned host files will give you a list with **1.5 million** addresses that will be blocked before they get the chance to download any data in your network.
 
-As a side effect, some websites might not work properly. You can correct that by adding specific domains to the white list: [`localhost/admin/groups-domains.php`](http://localhost/admin/groups-domains.php)
+As a side effect, some websites might not work properly. You can correct that by adding specific domains to the white list: [`localhost/admin/groups-domains.php`](http://localhost/admin/groups-domains.php).
+
+For example, if you use Microsoft Copilot, you'd probably want to add `microsoft.com` as a wildcard there, otherwise the page would load but you wouldn't be able to chat with Microsoft's AI agent.
+
+In fact, every time you try to load a page that doesn't load completely or lack a part of it, its probably being filtered out by pi-hole.
+
+After adding a whitelist, disconnect and reconnect to your network for changes to take effect.
 
 Have fun with a cleaner, lighter internet! :)
