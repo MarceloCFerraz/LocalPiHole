@@ -93,7 +93,7 @@ if ! is_pihole_running; then
         container_id=$(sudo podman container list -a | grep "pihole" | awk '{print $1}')
         sudo podman container start "$container_id" | grep -o ""
     else
-        sudo podman compose -f "$SCRIPTPATH/compose.yaml" up -d # untested. if this throws an error, replace it with the path to your local `compose.yaml` file
+        sudo podman-compose -f "$SCRIPTPATH/compose.yaml" up -d # untested. if this throws an error, replace it with the path to your local `compose.yaml` file
     fi
 else
     echo "Pi-hole is already running..."
